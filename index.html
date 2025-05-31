@@ -2,13 +2,33 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ROI Rechner</title>
+    
     <link rel="stylesheet" crossorigin href="./index-D01VHn55.css">
-    <script type="module" crossorigin src="./index-B-ZomfJ9.js"></script>
+
+    <style>
+      /* Zusätzliche Stile, um den Hintergrund der iFrame-Seite transparent zu machen */
+      html, body {
+        background-color: transparent !important; /* Macht den Hintergrund der HTML-Seite im iFrame transparent */
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Stellt sicher, dass html und body die volle Höhe einnehmen */
+      }
+
+      #root {
+        min-height: 100%; /* Stellt sicher, dass das React-Wurzelelement die volle Höhe einnimmt */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Wenn dein Rechner-Container (bg-black) bereits eine feste Breite hat,
+           ist das eventuell nicht alles nötig, aber es schadet nicht. */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" crossorigin src="./index-B-ZomfJ9.js"></script>
   </body>
 </html>
